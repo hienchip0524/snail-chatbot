@@ -1,0 +1,21 @@
+{
+  "name": "golden-snail-chatbot",
+  "version": "1.0.0",
+  "description": "Chatbot tư vấn Máy thu gom ốc bươu vàng và trứng dùng Gemini API",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "@google/genai": "latest",
+    "cors": "latest",
+    "dotenv": "latest",
+    "express": "latest",
+    "multer": "latest"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

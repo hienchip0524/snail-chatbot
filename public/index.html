@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Máy Thu Gom Ốc Bươu Vàng</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="sidebar">
+        <div class="brand">
+          <div class="logo">🌾</div>
+          <div>
+            <h1>Ốc Vàng AI</h1>
+            <p>Trợ lý tư vấn máy thu gom ốc bươu vàng</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Tải tài liệu</h2>
+          <p>Upload poster, PDF, file thông số, ảnh ruộng hoặc ảnh máy để chatbot trả lời chính xác hơn.</p>
+          <input id="fileInput" type="file" accept=".pdf,.txt,.doc,.docx,.png,.jpg,.jpeg,.webp" />
+          <button id="uploadBtn">Add file</button>
+          <div id="fileStatus" class="status"></div>
+        </div>
+
+        <div class="card">
+          <h2>Camera</h2>
+          <p>Chụp ảnh ruộng/ốc/trứng rồi gửi vào chatbot.</p>
+          <video id="camera" autoplay playsinline hidden></video>
+          <canvas id="canvas" hidden></canvas>
+          <div class="row">
+            <button id="openCameraBtn">Mở camera</button>
+            <button id="captureBtn">Chụp & upload</button>
+          </div>
+          <div id="cameraStatus" class="status"></div>
+        </div>
+
+        <div class="card small">
+          <h2>Gợi ý hỏi</h2>
+          <button class="quick">Máy này dùng để làm gì?</button>
+          <button class="quick">Cách sử dụng máy như thế nào?</button>
+          <button class="quick">Máy có làm hư lúa non không?</button>
+          <button class="quick">Thông số kỹ thuật của máy?</button>
+          <button class="quick">Tạo bài đăng Facebook giới thiệu sản phẩm</button>
+        </div>
+      </section>
+
+      <section class="chat-panel">
+        <header class="chat-header">
+          <div>
+            <h2>Chatbot tư vấn sản phẩm</h2>
+            <p>Trả lời bằng tiếng Việt, ưu tiên dữ liệu từ file đã upload.</p>
+          </div>
+          <button id="resetBtn">Reset</button>
+        </header>
+
+        <div id="messages" class="messages">
+          <div class="message bot">
+            <div class="bubble">
+              Xin chào! Tôi là trợ lý AI cho máy thu gom ốc bươu vàng và trứng. Bạn có thể hỏi về công dụng, thông số, cách dùng, bảo trì hoặc upload file để tôi trả lời chính xác hơn.
+            </div>
+          </div>
+        </div>
+
+        <form id="chatForm" class="composer">
+          <button type="button" id="micBtn" title="Nói bằng giọng nói">🎙️</button>
+          <textarea id="messageInput" placeholder="Nhập câu hỏi..." rows="1"></textarea>
+          <button type="submit">Gửi</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
